@@ -1,0 +1,25 @@
+
+#type: args
+
+train:
+  epochs: 400
+  batch_size: 16
+  lr: 3.0e-4
+
+diffusion:
+  layers: 4 
+  channels: 64 
+  nheads: 8
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.05 # 0.01~0.05
+  num_steps: 320
+  schedule: "quad"
+  radius_5G_station: 120 # 5G基站的覆盖半径，取500m
+
+model:
+  is_unconditional: True
+  use_4G_pattern : True
+  timeemb: 128
+  featureemb: 32
+  N_emb: 32
